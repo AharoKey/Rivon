@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rivon Launcher | خفة، قوة، ثقة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #7289da;
+            --accent: #9b59b6;
+            --bg: #0b0b0e;
+            --card: #15151a;
+            --text: #d1d1d1;
+            --success: #2ecc71;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(11, 11, 14, 0.9);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-direction: row; /* يضمن الترتيب من اليمين لليسار */
+        }
+
+        .brand span {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .brand img {
+            height: 35px; /* الشعار الآن على يسار النص في الواجهة العربية */
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 20px;
+            text-align: center;
+            background: radial-gradient(circle at top, #1a1230 0%, #0b0b0e 100%);
+        }
+
+        .arabic-badge {
+            background: rgba(230, 126, 34, 0.1);
+            color: #e67e22;
+            padding: 4px 15px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+            border: 1px solid rgba(230, 126, 34, 0.2);
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            color: white;
+            margin: 0 0 10px 0;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 25px auto;
+            color: #9da0a5;
+        }
+
+        .btn-main {
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            color: white;
+            padding: 12px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-main:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(114, 137, 218, 0.3);
+        }
+
+        /* Security Box */
+        .security-info {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--success);
+        }
+
+        /* Features */
+        .features {
+            padding: 40px 8%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.03);
+            text-align: center;
+        }
+
+        .card h3 {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Specs Table */
+        .specs {
+            background: #0e0e12;
+            padding: 40px 8%;
+            text-align: center;
+        }
+
+        .specs-grid {
+            display: inline-grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        footer {
+            padding: 30px;
+            text-align: center;
+            font-size: 13px;
+            color: #555;
+            border-top: 1px solid rgba(255,255,255,0.03);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            <span>RivonLauncher</span>
+            <img src="logo.png" alt="Rivon Logo">
+        </div>
+        <div class="nav-links">
+            <a href="#features" style="color: white; text-decoration: none; font-size: 14px;">المميزات</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="arabic-badge">بأيدي مطور عربي 🇸🇦</div>
+        <h1>Rivon Launcher</h1>
+        <p>اللانشر الأسرع والأخف لتشغيل ماينكرافت. استقرار تام، استهلاك رامات شبه منعدم، وتجربة خالية من التعقيد.</p>
+        
+        <a href="#" class="btn-main">تحميل الآن</a>
+
+        <div class="security-info">
+            <span>✔ آمن ومفحوص تماماً</span>
+            <span>|</span>
+            <span style="color: #9da0a5;">ثقة المستخدم أولويتنا</span>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="card">
+            <h3>🚀 أداء فائق</h3>
+            <p>تشغيل اللعبة بأعلى FPS ممكن بفضل التعديلات الخاصة على محرك التشغيل.</p>
+        </div>
+        <div class="card">
+            <h3>🍃 خفة الوزن</h3>
+            <p>صُمم ليعمل بسلاسة حتى على الأجهزة القديمة، دون إرهاق المعالج أو الرام.</p>
+        </div>
+        <div class="card">
+            <h3>🛠️ ذكاء مدمج</h3>
+            <p>نظام ذكي يجلب كافة ملفات اللعبة والمودات المطلوبة آلياً لضمان التشغيل.</p>
+        </div>
+    </section>
+
+    <section class="specs">
+        <h2>لماذا تختار Rivon؟</h2>
+        <div class="specs-grid">
+            <div><strong>الاستهلاك:</strong> أقل من 100MB RAM</div>
+            <div><strong>اللغة:</strong> واجهة عربية بالكامل</div>
+            <div><strong>الأمان:</strong> حماية عالية وموثوقة</div>
+            <div><strong>الأداء:</strong> تشغيل اللعبة بأقصى طاقة</div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Rivon Launcher | تم التطوير بواسطة مبرمج عربي لدعم مجتمع اللاعبين.
+    </footer>
+
+</body>
+</html>
