@@ -1,0 +1,221 @@
+/* Root Colors */
+:root {
+    --primary: #7289da;
+    --accent: #9b59b6;
+    --bg: #0b0b0e;
+    --card: #15151a;
+    --text: #d1d1d1;
+    --success: #2ecc71;
+}
+
+/* أول سطر بعد :root */
+body {
+    font-family: 'Cairo', sans-serif; /* ← عمّم الخط */
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ازالة اي خط افتراضي قد يأتي من المتصفح على الروابط/الأزرار */
+a, button, .btn-main, .installer-option {
+    font-family: inherit; /* يورث من body */
+}
+/* Header */
+header {
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(11, 11, 14, 0.9);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand span {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.brand img {
+    height: 35px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Hero Section */
+.hero {
+    padding: 60px 20px;
+    text-align: center;
+    background: radial-gradient(circle at top, #1a1230 0%, #0b0b0e 100%);
+}
+
+.arabic-badge {
+    background: rgba(230, 126, 34, 0.1);
+    color: #e67e22;
+    padding: 4px 15px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+    border: 1px solid rgba(230, 126, 34, 0.2);
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    color: white;
+    margin: 0 0 10px 0;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 25px auto;
+    color: #9da0a5;
+}
+
+.btn-main {
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    color: white;
+    padding: 12px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-main:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(114, 137, 218, 0.3);
+}
+
+.security-info {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--success);
+}
+
+/* Features */
+.features {
+    padding: 40px 8%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.03);
+    text-align: center;
+}
+
+.card h3 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Specs */
+.specs {
+    background: #0e0e12;
+    padding: 40px 8%;
+    text-align: center;
+}
+
+.specs-grid {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    padding: 30px;
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+    border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+/* القائمة المنسدلة الناعمة */
+.installer-dropdown {
+    display: none;
+    margin-top: 20px;
+    background: rgba(21, 21, 26, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.installer-dropdown h3 {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.installer-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.installer-option:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(114, 137, 218, 0.3);
+}
+
+.installer-option small {
+    font-size: 12px;
+    opacity: 0.85;
+}
+
+.divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+}
